@@ -1,4 +1,4 @@
-node('ubuntu'){
+node('docker'){
     def dockerImage = "bhuvanakadiveti/nodeapp:1.0"
     deleteDir()
     stage('Checkout'){
