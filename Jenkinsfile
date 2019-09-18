@@ -7,6 +7,7 @@ node('ubuntu'){
     
     
     stage('Build Docker Image'){
+        sh "sudo apt-get clean"
         sh "docker build -t ${dockerImage} ."
     }
     
