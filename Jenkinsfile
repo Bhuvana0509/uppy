@@ -1,4 +1,4 @@
-node{
+node('ubuntu'){
     def imgVersion = UUID.randomUUID().toString()
     def dockerImage = "bhuvanakadiveti/nodeapp:${imgVersion}"
     stage('Checkout'){
