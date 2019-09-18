@@ -1,4 +1,4 @@
-node{
+node('ubuntu'){
     def dockerImage = "bhuvanakadiveti/nodeapp:1.0"
     stage('Checkout'){
         
