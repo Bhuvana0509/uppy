@@ -12,9 +12,9 @@ node('docker'){
         sh "docker build -t ${dockerImage} ."
     }
     
-    stage('Push DockerHub'){
+    stage('Push image to registry'){
 		withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerhubPwd')]) {
-			sh "docker login -u bhuvanakadiveti -p Bhuvana@321#"
+      sh "docker login -u bhuvanakadiveti -p ${dockerhubPwd}"
 		}
         
         sh "docker push ${dockerImage}"
